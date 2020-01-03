@@ -3,7 +3,7 @@
     $username = "root";
     $password = "root";
     $database = "Restaurante"; // La buena es Restaurante
-
+    // Hola bb
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);
 
