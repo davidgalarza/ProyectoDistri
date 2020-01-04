@@ -17,7 +17,7 @@ use ElementaryFramework\WaterPipe\HTTP\Response\Response;
 $basePipe = new WaterPipe;
 
 // Handle any kind of requests made at the root of the pipe
-$basePipe->request("", function (Request $req, Response $res) {
+$basePipe->request("/usuarios/crear", function (Request $req, Response $res) {
     include './utils/db_conecction.php';
     $params = $req->getParams();
     
