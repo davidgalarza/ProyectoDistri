@@ -1,9 +1,9 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    //$password = "root";
+    $password = "root";
     $password = "";
-    $database = "Restaurante"; // La buena es Restaurante
+    //$database = "Restaurante"; // La buena es Restaurante
     // Hola bb
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);
