@@ -27,10 +27,9 @@ $basePipe->request("", function (Request $req, Response $res) {
     $telefono = $params["telefono"];
     $perfil = $params["perfil"];
     $contrasena = $params["contrasena"];
-    
-    $sql = "INSERT INTO Usuarios (NOMBRE, APELLIDO, CEDULA, TELEFONO, PERFIL, CONTRASENA) VALUES ('$nombre', '$apellido', '$cedula', '$telefono', '$perfil', '$contrasena')";
+    $passHash = password_hash($contrasena, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO Usuarios (NOMBRE, APELLIDO, CEDULA, TELEFONO, PERFIL, CONTRASENA) VALUES ('$nombre', '$apellido', '$cedula', '$telefono', '$perfil', '$passHash')";
     $correcto = $conn->query($sql);
-
     $res->sendJSON(array(
         "correcto" => $correcto,
     ));
