@@ -9,7 +9,6 @@ $descripcion = $params["descripcion"];
 $estado = $params["estado"];
 $categoria = $params["categoria"];
 
-$passHash = password_hash($contrasena, PASSWORD_DEFAULT);
 $sql = "INSERT INTO Platos (NOMBRE, PRECIO, DESCRIPCION, ESTADO, CATEGORIA) VALUES ('$nombre', $precio, '$descripcion', '$estado', '$categoria')";
 $correcto = $conn->query($sql);
 $res = array(
