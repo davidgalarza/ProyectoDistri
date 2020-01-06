@@ -25,6 +25,10 @@ ESTADO) VALUES ($idCliente, '$fecha', $subtotal, $iva, $total, $idMesa, 'PENDIEN
 $correcto = $conn->query($sql);
 $idPedido = $conn->insert_id;
 
+$sql = "UPDATE Mesas SET ESTADO = 'OCUPADA' WHERE ID = $idMesa";
+
+$correcto = $conn->query($sql);
+
 $detallesString = explode(",",$detalles);
 
 foreach ($detallesString as $detalle){ 
@@ -39,7 +43,7 @@ foreach ($detallesString as $detalle){
         CANTIDAD,
         SUBTOTAL,
         ID_PEDIDO) VALUES ($idPlato, $cantidad, $subtotal, $idPedido)";
-    echo $sql;
+
     $correcto = $conn->query($sql);
 } 
 
