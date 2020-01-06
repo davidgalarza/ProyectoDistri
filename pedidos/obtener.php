@@ -15,6 +15,7 @@ $row = mysqli_fetch_assoc($sth);
 if($row){
     $row['FECHA'] = $row['FECHA_HORA'];
     $row['IDMESA'] = $row['ID_MESA'];
+    $row['NUMEROFACTUTA'] = $row['NUMERO_FACTUTA']; 
     // Obtener cliente
     $idCliente = $row['ID_CLIENTE'];
     $sql = "SELECT * FROM Clientes 
