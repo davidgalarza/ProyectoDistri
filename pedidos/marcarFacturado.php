@@ -7,7 +7,7 @@ $idP = $params["idPedido"];
 $idM = $params["idMesa"];
 
 $sql = "SELECT * FROM Pedidos 
-order by id desc limit 1";
+order by NUMERO_FACTUTA desc limit 1";
 $sth = $conn->query($sql);
 
 $pedidoInfo = mysqli_fetch_assoc($sth);
