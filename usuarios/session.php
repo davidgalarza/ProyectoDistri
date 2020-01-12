@@ -9,7 +9,7 @@ $params = $_GET;
 $cedula = $params["cedula"];
 $contrasena = $params["contrasena"];
 
-$sql = "SELECT CONTRASENA, PERFIL FROM USUARIOS WHERE CEDULA = '$cedula'";
+$sql = "SELECT CONTRASENA, PERFIL FROM Usuarios WHERE CEDULA = '$cedula'";
 
 $resultado = $conn->query($sql);
 $row = mysqli_fetch_assoc($resultado);
